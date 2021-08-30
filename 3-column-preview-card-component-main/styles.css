@@ -1,0 +1,141 @@
+/* 
+    Fonts
+*/
+@import url("https://fonts.google.com/specimen/Lexend+Deca");
+@import url("https://fonts.google.com/specimen/Big+Shoulders+Display");
+
+/* 
+    Variables
+*/
+:root {
+    /* Primary Colors */
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral Colors */
+    --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --clr-very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* 
+    Global Styles
+*/
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--clr-transparent-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    display: grid;
+    grid-column: 1;
+    border-radius: 10px;
+}
+
+.container__item {
+    width: 15rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 10px 35px;
+}
+
+.container__item > h2 {
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.container__item > p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+img {
+    height: 30px;
+    width: 50px;
+}
+
+.sedan > button {
+    color: var(--clr-bright-orange);
+}
+
+.suv > button {
+    color: var(--clr-dark-cyan);
+}
+
+.luxury > button {
+    color: var(--clr-very-dark-cyan);
+}
+
+button {
+    padding: 10px 25px;
+    background-color: var(--clr-very-light-gray);
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: inherit;
+    color: var(--clr-very-light-gray);
+    border: 2px solid var(--clr-very-light-gray);
+}
+
+.sedan {
+    background-color: var(--clr-bright-orange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.suv {
+    background-color: var(--clr-dark-cyan);
+}
+
+.luxury {
+    background-color: var(--clr-very-dark-cyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* 
+    Media Query
+*/
+
+@media screen and (min-width: 800px){
+    body {
+        height: 100vh;
+    }
+    .container {
+        display: flex;
+    }
+
+    .sedan {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+
+    .luxury {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}

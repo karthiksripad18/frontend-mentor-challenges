@@ -1,0 +1,162 @@
+/* 
+    Fonts
+*/
+@import url("https://fonts.google.com/specimen/Red+Hat+Display");
+
+
+
+/* 
+    Variables
+*/
+:root {
+    /* Primary Colors */
+    --clr-bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral Colors */
+    --clr-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-desaturated-blue: hsl(224, 23%, 55%);
+
+    /* Font Family */
+    --ff-primary: 'Red Hat Display', sans-serif;
+
+    /* Images */
+    --img-desktop-background: url("./images/pattern-background-desktop.svg");
+    --img-mobile-background: url("./images/pattern-background-mobile.svg");
+}
+
+
+/* 
+    Global Styles
+*/
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--ff-primary);
+    background: var(--img-desktop-background) no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: hsl(225, 100%, 94%);
+}
+
+
+/* 
+    Container Styles
+*/
+.container {
+    background: white;
+    width: 23rem;
+    min-height: 70vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-icon {
+    width: 100%;
+    object-fit: contain;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.order-summary {
+    text-align: center;
+    padding: 10px 25px;
+}
+
+.order-summary-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.order-summary-description {
+    color: var(--clr-desaturated-blue);
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.annual-plan {
+    min-height: 60px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+}
+
+.annual-plan > img {
+    width: 40px;
+}
+
+a {
+    color: var(--clr-bright-blue);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.annual-plan-rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 7px;
+    font-size: 0.8rem;
+    color: var(--clr-desaturated-blue);
+}
+
+.annual-plan-header {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 3px;
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.proceed-payment {
+    width: 80%;
+    background-color: var(--clr-bright-blue);
+    color: var(--clr-very-pale-blue);
+    padding: 10px;
+}
+
+.proceed-payment:hover {
+    background-color: var(--clr-desaturated-blue);
+}
+
+.cancel-payment {
+    background-color: white;
+    color: var(--clr-desaturated-blue);
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.cancel-payment:hover {
+    color: black;
+}

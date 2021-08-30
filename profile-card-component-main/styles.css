@@ -1,0 +1,110 @@
+/* 
+    Variables
+*/
+:root {
+    --primary-color: hsl(185, 75%, 39%);
+    --secondary-color: hsl(229, 23%, 23%);
+    --tertiary-color: hsl(227, 10%, 46%);
+    --neutral-color: hsl(0, 0%, 59%);
+    --white-color: white;
+}
+
+/* 
+    Global Styles
+*/
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary-color);
+    background-image: url(images/bg-pattern-bottom.svg), url(images/bg-pattern-top.svg);
+    background-position: bottom left 25vh, top right 25vh;
+    background-size: 350px;
+    background-repeat: no-repeat;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+/* 
+    Card Styles
+*/
+.card {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: var(--white-color);
+    width: 80%;
+    height: 50vh;
+}
+
+.background-card {
+    height: 30%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.user-image {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid var(--white-color);
+    transform: translateY(-50px);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+}
+
+.user-age {
+    font-weight: normal;
+    color: var(--neutral-color);
+}
+
+.user-country {
+    margin-top: 10px;
+    color: var(--neutral-color);
+}
+
+.profile-info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+.profile-attributes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.profile-attributes > span {
+    margin-top: 5px;
+    color: var(--neutral-color);
+    font-size: 0.7rem;
+}
+
+/* 
+    Media Queries
+*/
+
+@media screen and (min-width: 800px) {
+    body {
+        background-size: 500px;
+        background-position: bottom left 100vh, top right 75vh;
+    }
+    .card {
+        width: 25%;
+    }
+}
